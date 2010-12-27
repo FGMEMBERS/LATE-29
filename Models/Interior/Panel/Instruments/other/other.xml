@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>other.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>fond</object-name>
+    <object-name>attaches</object-name>
+    <object-name>barres</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+</PropertyList>
+

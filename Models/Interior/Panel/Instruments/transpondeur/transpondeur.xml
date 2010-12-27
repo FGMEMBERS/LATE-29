@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>transpondeur.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>fond</object-name>
+    <object-name>infos</object-name>
+    <object-name>bouton1</object-name>
+    <object-name>bouton2</object-name>
+    <object-name>bouton3</object-name>
+    <object-name>bouton4</object-name>
+    <object-name>bouton5</object-name>
+    <object-name>bouton6</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+</PropertyList>
+

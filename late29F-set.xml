@@ -4,11 +4,18 @@
 <PropertyList include="late29F-yasim-cnf.xml">
 
   <sim>
-    <description>Latécoère 290 (Floats)</description>
+    <description>Latécoère 290 (Floats) (YASim)</description>
     <author>Emmanuel BARANGER (3D/FDM)</author>
 
     <type type="string">seaplane</type>
   
+    <rating>
+      <FDM type="int">     2 </FDM>
+      <systems type="int"> 2 </systems>
+      <cockpit type="int"> 4 </cockpit>
+      <model type="int">   4 </model>
+    </rating>
+
   </sim>
 
 </PropertyList>

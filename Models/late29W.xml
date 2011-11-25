@@ -4,41 +4,22 @@
 
   <!-- Le fuselage -->
   <model>
-    <path>Aircraft/LATE-29/Models/late29.xml</path>
-    <offsets>
-      <x-m>       0 </x-m>
-      <y-m>       0 </y-m>
-      <z-m>       0 </z-m>
-      <pitch-deg> 0 </pitch-deg>
-    </offsets>
+    <path>Aircraft/LATE-29/Models/main.xml</path>
   </model>
 
   <!-- Les roues -->
   <model>
     <path>Aircraft/LATE-29/Models/wheels.xml</path>
+  </model>
+
+  <!-- Une ombre pour OSG --> 
+  <model>
+    <path>Aircraft/LATE-29/Models/shadowW.xml</path>
     <offsets>
-      <x-m>       0 </x-m>
-      <y-m>       0 </y-m>
-      <z-m>       0 </z-m>
-      <pitch-deg> 0 </pitch-deg>
+      <x-m>  0 </x-m>
+      <y-m>  0 </y-m>
+      <z-m> -1 </z-m>
     </offsets>
   </model>
-
-  <!-- Une ombre pour OSG 
-  <model>
-    <name>shadowOSG</name>
-    <path>Aircraft/LATE-29/Models/shadowW.xml</path>
-  </model>
-
-  <animation>
-    <type>select</type>
-    <object-name>shadowOSG</object-name>
-    <condition>
-      <equals>
-        <property>sim[0]/rendering/shadows-ai</property>
-        <value>true</value>
-      </equals>
-    </condition>
-  </animation>-->
 
 </PropertyList>

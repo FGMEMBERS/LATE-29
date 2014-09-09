@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+ 
+    <author>BARANGER Emmanuel</author>
+    <aircraft-version>0.2</aircraft-version>
+    <status>0.1 Alpha</status>
+   
+    <fuel-fraction>0.75</fuel-fraction>
+  
+    <sound>
+      <path>Aircraft/LATE-29/Sounds/late29-sound.xml</path>
+    </sound>
+
+    <flaps>
+      <setting> 0.00 </setting> <!-- Cruise -->
+      <setting> 0.50 </setting> <!--        -->
+      <setting> 1.00 </setting> <!--   Full -->
+    </flaps>
+
+    <replay>
+      <disable>1</disable>
+    </replay>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int type="int" n="0">  0 </int>                                      <!-- 0 immat -->
+        <int type="int" n="1">  0 </int>                                      <!-- 1 immat -->
+        <int type="int" n="2">  0 </int>                                      <!-- 2 immat -->
+        <int type="int" n="3">  0 </int>                                      <!-- 3 immat -->
+        <int type="int" n="4">  0 </int>                                      <!-- 4 immat -->
+        <int type="int" n="5">  0 </int>                                      <!-- 5 immat -->
+        <int type="bool" n="6"> 1 </int>                                      <!-- 6 smoke/bomb/torpedo -->
+        <int type="int" n="7">  0 </int>                                      <!-- 7 color -->
+        <int n="8" alias="/systems/electrical/outputs/nav-lights">  0 </int>  <!-- 8 nav-lights -->
+        <int n="9" alias="/sim/model/lights/beacon/state">  false </int>      <!-- 9 strobe-lights -->
+        <int n="10" alias="/controls/electric/key-pos">  0 </int>             <!-- 10 key position -->
+        <float n="2" alias="/position/gear-agl-m">  0 </float>                <!-- 11 altitude for MP shadow -->
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>  
+      </generic>
+    </multiplay>
+
+    <help>
+      <title>Latecoere 290</title>
+      <key>
+        <name>d</name>
+        <desc>Open/Close crew doors</desc>
+      </key>
+      <line>----------------------------------------------</line>
+      <key>
+        <name>D</name>
+        <desc>Open/Close passagers doors</desc>
+      </key>
+      <line>______________________________________________</line>
+    </help>
+
+    <menubar include="Dialogs/late29-menu.xml"/>
+
+  </sim>
+
+  <engines>
+    <engine>
+      <rpm type="double">0</rpm>
+      <magnetos>0</magnetos>
+      <running>true</running>
+    </engine>
+  </engines>
+  
+  <environment>
+    <turbulence>
+      <use-cloud-turbulence>true</use-cloud-turbulence>
+    </turbulence>
+  </environment>
+
+  <input>
+    <keyboard include="Nasal/late29-keyboard.xml"/>
+  </input>
+ 
+  <nasal>
+    <doors> 
+      <file>Aircraft/LATE-29/Nasal/doors.nas</file>
+    </doors> 
+    <late29> 
+      <file>Aircraft/LATE-29/Nasal/light.nas</file>
+      <file>Aircraft/LATE-29/Nasal/liveries.nas</file>
+      <file>Aircraft/LATE-29/Nasal/immat.nas</file>
+    </late29>
+  </nasal>
+
+</PropertyList>
+

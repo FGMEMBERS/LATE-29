@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>panel.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <!-- ALT -->
+  <model>
+    <path>Aircraft/LATE-29/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m>  0.159 </x-m>
+      <y-m> -0.110 </y-m>
+      <z-m>  0.030 </z-m>
+    </offsets>
+  </model>
+
+  <!-- CONTROLEUR -->
+  <model>
+    <path>Aircraft/LATE-29/Models/Interior/Panel/Instruments/controleur/controleur.xml</path>
+    <offsets>
+      <x-m> 0.164 </x-m>
+      <y-m> 0.026 </y-m>
+      <z-m> 0.044 </z-m>
+    </offsets>
+  </model>
+
+  <!-- COMPASS -->
+  <model>
+    <path>Aircraft/LATE-29/Models/Interior/Panel/Instruments/compass/compass.xml</path>
+    <offsets>
+      <x-m>  0.160 </x-m>
+      <y-m>  0.026 </y-m>
+      <z-m> -0.130 </z-m>
+    </offsets>
+  </model>
+
+  <!-- TACHIMETRE -->
+  <model>
+    <path>Aircraft/LATE-29/Models/Interior/Panel/Instruments/tach/tach.xml</path>
+    <offsets>
+      <x-m> 0.160 </x-m>
+      <y-m> 0.160 </y-m>
+      <z-m> 0.030 </z-m>
+    </offsets>
+  </model>
+
+  <!-- FUEL -->
+  <model>
+    <path>Aircraft/LATE-29/Models/Interior/Panel/Instruments/fuel/fuel.xml</path>
+    <offsets>
+      <x-m>  0.160 </x-m>
+      <y-m>  0.134 </y-m>
+      <z-m> -0.085 </z-m>
+    </offsets>
+  </model>
+
+  <!-- OIL -->
+  <model>
+    <path>Aircraft/LATE-29/Models/Interior/Panel/Instruments/oil/oil.xml</path>
+    <offsets>
+      <x-m>  0.160 </x-m>
+      <y-m>  0.204 </y-m>
+      <z-m> -0.085 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Radio -->
+  <model>
+    <path>Aircraft/LATE-29/Models/Interior/Panel/Instruments/radio/radio.xml</path>
+    <offsets>
+      <x-m> -0.040 </x-m>
+      <y-m>  0.647 </y-m>
+      <z-m> -0.067 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Transpondeur -->
+  <model>
+    <path>Aircraft/LATE-29/Models/Interior/Panel/Instruments/transpondeur/transpondeur.xml</path>
+    <offsets>
+      <x-m> -0.087 </x-m>
+      <y-m>  0.582 </y-m>
+      <z-m> -0.145 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Other -->
+  <model>
+    <path>Aircraft/LATE-29/Models/Interior/Panel/Instruments/other/other.xml</path>
+    <offsets>
+      <x-m> -0.013 </x-m>
+      <y-m>  0.625 </y-m>
+      <z-m> -0.402 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>
+

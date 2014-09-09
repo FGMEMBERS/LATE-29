@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>planchet</object-name>
+    <object-name>structure</object-name>
+    <object-name>cloison</object-name>
+    <object-name>inttourvitres</object-name>
+    <object-name>palonnier</object-name>
+    <object-name>manche</object-name>
+    <object-name>volant</object-name>
+    <object-name>capot</object-name>
+    <object-name>flapsmanette</object-name>
+    <object-name>mixturemanette</object-name>
+    <object-name>supportmixture1</object-name>
+    <object-name>supportmixture2</object-name>
+    <object-name>throttlemanette</object-name>
+    <object-name>throttle</object-name>
+    <object-name>seats</object-name>
+    <object-name>inttrous</object-name>
+    <object-name>tuyeau</object-name>
+    <object-name>elevatortrim</object-name>
+    <object-name>ruddertrimG</object-name>
+    <object-name>ruddertrimD</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <!-- Pilote -->
+  <model>
+    <path>Aircraft/LATE-29/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -3.635 </x-m>
+      <y-m> -0.371 </y-m>
+      <z-m>  0.694 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Tableau de bord -->
+  <model>
+    <path>Aircraft/LATE-29/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -4.304 </x-m>
+      <y-m> -0.356 </y-m>
+      <z-m>  1.112 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Palonnier -->
+  <animation>
+    <type>rotate</type>
+    <object-name>palonnier</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 25 </factor>
+    <center>
+      <x-m> -4.224 </x-m>
+      <y-m> -0.387 </y-m>
+      <z-m>  0.466 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+ 
+  <!-- Le Manche -->
+  <animation>
+    <name>LeVolant</name>
+    <object-name>manche</object-name>
+    <object-name>volant</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>LeVolant</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> 8 </factor>
+    <center>
+      <x-m> -3.871 </x-m>
+      <y-m> -0.387 </y-m>
+      <z-m>  0.398 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>volant</object-name>
+    <property>surface-positions/aileron-pos-norm</property>
+    <factor> 40 </factor>
+    <center>
+      <x-m> -3.817 </x-m>
+      <y-m> -0.386 </y-m>
+      <z-m>  1.008 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <!-- Manette de mixture -->
+  <animation>
+    <type>rotate</type>
+    <object-name>mixturemanette</object-name>
+    <property>controls/engines/engine/mixture</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 300 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -4.526 </x1-m>
+      <y1-m>  0.000 </y1-m>
+      <z1-m>  0.574 </z1-m>
+      <x2-m> -3.748 </x2-m>
+      <y2-m>  0.000 </y2-m>
+      <z2-m>  0.937 </z2-m>
+    </axis>
+  </animation>
+
+  <!-- Manette des volets -->
+  <animation>
+    <type>rotate</type>
+    <object-name>flapsmanette</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m> -3.630 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.390 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Manette du moteur -->
+  <animation>
+    <type>rotate</type>
+    <object-name>throttlemanette</object-name>
+    <property>controls/engines/engine/throttle</property>
+    <factor> -55 </factor>
+    <center>
+      <x-m> -3.939 </x-m>
+      <y-m> -0.674 </y-m>
+      <z-m>  0.961 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
+

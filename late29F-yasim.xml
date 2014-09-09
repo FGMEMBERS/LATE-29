@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Latecoere 29 - 2007 BARANGER Emmanuel
+                    Updated with Melchior script 2010 
+   
+     Latecoere 29
+
+     sources          : 
+
+     wingspan         : 
+     length           : 
+     height           : 
+     max speed        : 
+     empty weight     : 
+     engine           : 
+     propeller        : 
+     fuel tank        : 
+-->
+
+<airplane mass="2850" >
+
+  <approach speed="48" aoa="8" >
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1.0"/>
+    <control-setting axis="/controls/flight/flaps" value="1.0"/>
+  </approach>
+
+  <cruise speed="120" alt="15000" >
+    <control-setting value="1.0" axis="/controls/engines/engine[0]/throttle" />
+    <control-setting value="1.0" axis="/controls/engines/engine[0]/mixture" />
+    <control-setting value="1.0" axis="/controls/engines/engine[0]/propeller-pitch" />
+    <control-setting value="0.0" axis="/controls/flight/flaps" />
+  </cruise>
+
+  <cockpit x="3.491" y="0.382" z="1.552" />
+
+  <fuselage ax="6.076" ay="0" az="0.663" bx="-5.783" by="0" bz="0.663" width="1.6" taper="0.5" midpoint="0.25"/>
+
+  <fuselage ax="7.209" ay="1.966" az="-2.133" bx="-1.846" by="1.966" bz="-1.795" width="1.2" taper="0.3" midpoint="0.5"/>
+
+  <fuselage ax="7.209" ay="-1.966" az="-2.133" bx="-1.846" by="-1.966" bz="-1.795" width="1.2" taper="0.3" midpoint="0.5"/>
+
+  <wing x="1.887" y="0.6" z="1.57" 
+        chord="3.30" 
+        length="9" 
+        taper="1" 
+        incidence="4" 
+        camber="0.01">
+        <stall width="4" aoa="16" peak="1.5" />
+        <flap0 start="0.21" end="0.49" lift="1.5" drag="1.6" />
+        <flap1 start="0.49" end="0.78" lift="1.3" drag="1.1" />
+
+        <control-input control="FLAP0" axis="/controls/flight/flaps" />
+        <control-input split="true" control="FLAP1" axis="/controls/flight/aileron" />
+        <control-input split="true" control="FLAP1" axis="/controls/flight/aileron-trim" />
+
+        <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
+        <control-output control="FLAP1" prop="/surface-positions/left-aileron-pos-norm" side="left"/>
+        <control-output control="FLAP1" prop="/surface-positions/right-aileron-pos-norm" side="right"/>
+        <control-output control="FLAP1" prop="/surface-positions/aileron-pos-norm"/>
+
+        <control-speed transition-time="8" control="FLAP0" />
+  </wing>
+
+  <hstab x="-5.526" y="0" z="1.250"  
+         chord="2.47" 
+         length="2.95"
+         taper="0.6"
+         sweep="10">
+         <stall width="4" aoa="16" peak="1.5" />
+         <flap0 drag="1.2" end="1" lift="1.5" start="0" />
+
+         <control-input control="FLAP0" axis="/controls/flight/elevator" />
+         <control-input control="FLAP0" axis="/controls/flight/elevator-trim" />
+    
+         <control-output prop="/surface-positions/elevator-pos-norm" control="FLAP0" />
+  </hstab>
+
+  <vstab x="-4.734" y="0" z="0.694" 
+         chord="4.145" 
+         length="2.8"
+         taper="0.36" 
+         sweep="28" >
+         <stall width="3" aoa="14" peak="1.5" />
+         <flap0 drag="1.2" end="1" lift="1.6" start="0" />
+
+         <control-input control="FLAP0" axis="/controls/flight/rudder" invert="true"/>
+         <control-input control="FLAP0" axis="/controls/flight/rudder-trim" invert="true"/>
+
+         <control-output prop="/surface-positions/rudder-pos-norm" control="FLAP0" min="1" max="-1"/>
+  </vstab>
+
+  <!-- Engines   source            : 
+
+                 name              : 
+                 type              : 
+                 power cruise      : 
+                 weight            : 
+                 displacement      : 
+                 compression       : 
+  -->
+  <propeller x="5.329" y="0.0" z="0.647" 
+             moment="35"
+             mass="668" 
+             radius="1.98"
+             cruise-power="400" 
+             cruise-alt="5000" 
+             min-rpm="1400" 
+             max-rpm="2300" 
+             cruise-speed="110" 
+             cruise-rpm="2200" 
+             fine-stop="0.9" 
+             coarse-stop="2.5">
+             <actionpt x="6.329" y="0.0" z="0.647"/>
+             <piston-engine eng-rpm="2300" 
+                            alt="0" 
+                            eng-power="450"
+                            displacement="985" 
+                            compression="6"/>
+             <control-input control="THROTTLE" axis="/controls/engines/engine[0]/throttle"/>
+             <control-input control="STARTER" axis="/controls/engines/engine[0]/starter"/>
+             <control-input control="MAGNETOS" axis="/controls/engines/engine[0]/magnetos"/>
+             <control-input control="MIXTURE" axis="/controls/engines/engine[0]/mixture"/>
+             <control-input control="ADVANCE" axis="/controls/engines/engine[0]/propeller-pitch"/>
+  </propeller>
+
+  <!-- Flotteurs -->
+  <!-- Centrales -->
+  <gear x="1.698" y="1.971" z="-2.643" 
+        compression="1.5" 
+        spring = "15" 
+        sfric = "0.85" 
+        dfric = "0.75" 
+        ignored-by-solver="0"
+        on-water="1" 
+        on-solid="1" 
+        reduce-friction-by-extension="1.15"
+        speed-planing="25" 
+        spring-factor-not-planing="0.25">
+  </gear>
+
+  <gear x="1.698" y="-1.971" z="-2.643" 
+        compression="1.5" 
+        spring = "15" 
+        sfric = "0.85"
+        dfric = "0.75" 
+        ignored-by-solver="0"
+        on-water="1" 
+        on-solid="1" 
+        reduce-friction-by-extension="1.15"
+        speed-planing="25" 
+        spring-factor-not-planing="0.25">
+  </gear>
+
+  <!-- Avants -->
+  <gear x="6.529" y="1.971" z="-2.740" 
+        compression="1.2" 
+        spring = "15" 
+        sfric = "0.8" 
+        dfric = "0.7" 
+        ignored-by-solver="0"
+        on-water="1" 
+        on-solid="1" 
+        reduce-friction-by-extension="1.15"
+        speed-planing="15" 
+        spring-factor-not-planing="0.7">
+  </gear>
+
+  <gear x="6.529" y="-1.971" z="-2.740" 
+        compression="1.2" 
+        spring = "15" 
+        sfric = "0.8" 
+        dfric = "0.7" 
+        ignored-by-solver="0"
+        on-water="1" 
+        on-solid="1" 
+        reduce-friction-by-extension="1.15"
+        speed-planing="15" 
+        spring-factor-not-planing="0.7">
+  </gear>
+
+  <!-- Arrieres -->
+  <gear x="-2.083" y="1.971" z="-2.280" 
+        compression="1.8" 
+        spring = "8" 
+        sfric = "0.9" 
+        dfric = "0.8" 
+        ignored-by-solver="1"
+        on-water="1" 
+        on-solid="1" 
+        reduce-friction-by-extension="0.9"
+        speed-planing="25" 
+        spring-factor-not-planing="3">
+  </gear>
+  <gear x="-2.083" y="-1.971" z="-2.280" 
+        compression="1.8" 
+        spring = "8" 
+        sfric = "0.9" 
+        dfric = "0.8" 
+        ignored-by-solver="1"
+        on-water="1" 
+        on-solid="1" 
+        reduce-friction-by-extension="0.9"
+        speed-planing="25" 
+        spring-factor-not-planing="3">
+  </gear>
+
+  <!-- Fuel  --> 
+  <tank x="2" y="0" z="0.5" capacity="210" />
+  <tank x="0.3" y="0" z="0.5" capacity="210" />
+  <tank x="-1.5" y="0" z="0.5" capacity="156" />
+
+  <ballast x="5.0" y="0.0" z="-2" mass="350" />
+
+</airplane>

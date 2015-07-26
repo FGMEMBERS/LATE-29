@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
   <particlesystem>
-    <name>wakeD</name>
+    <name>wake</name>
 
     <texture>wake.png</texture>
-
     <emissive>false</emissive>
     <lighting>true</lighting>
 
@@ -17,14 +16,19 @@
           <value>5</value>
         </greater-than>
         <or>
-          <property>gear/gear[1]/wow</property>
-          <property>gear/gear[3]/wow</property>
-          <property>gear/gear[5]/wow</property>
+          <!-- /gear/gear[3]/wow -->
+          <property>sim/multiplay/generic/float[9]</property>
+          <!-- /gear/gear[4]/wow -->
+          <property>sim/multiplay/generic/float[10]</property>
+          <!-- /gear/gear[5]/wow -->
+          <property>sim/multiplay/generic/float[11]</property>
         </or>
       </and>
     </condition>
 
     <attach>world</attach>
+        
+    <align>billboard</align>
 
     <placer>
       <type>point</type>
@@ -40,12 +44,12 @@
         <spread>2.5</spread>
       </speed-mps>
       <rotation-speed>
-        <x-min-deg-sec>5</x-min-deg-sec>
-        <y-min-deg-sec>5</y-min-deg-sec>
-        <z-min-deg-sec>5</z-min-deg-sec>
-        <x-max-deg-sec>25</x-max-deg-sec>
-        <y-max-deg-sec>25</y-max-deg-sec>
-        <z-max-deg-sec>25</z-max-deg-sec>
+        <x-min-deg-sec>0</x-min-deg-sec>
+        <y-min-deg-sec>0</y-min-deg-sec>
+        <z-min-deg-sec>0</z-min-deg-sec>
+        <x-max-deg-sec>0</x-max-deg-sec>
+        <y-max-deg-sec>0</y-max-deg-sec>
+        <z-max-deg-sec>0</z-max-deg-sec>
       </rotation-speed>
     </shooter>
 
@@ -55,9 +59,7 @@
         <spread>0</spread>
       </particles-per-sec>
     </counter>
-
-    <align>billboard</align>
-
+        
     <particle>
       <start>
         <color>
@@ -95,7 +97,7 @@
           </alpha>
         </color>
         <size>
-          <value>0.5</value>
+          <value>2</value>
         </size>
       </end>
 
@@ -103,16 +105,16 @@
         <value>6.0</value>
       </life-sec>
 
-      <mass-kg>0.15</mass-kg>
-      <radius-m>0.3</radius-m>
+      <mass-kg>1</mass-kg>
+      <radius-m>1</radius-m>
     </particle>
-
+        
     <program>
       <fluid>water</fluid>
-      <gravity>true</gravity>
+      <gravity>false</gravity>
       <wind>false</wind>
     </program>
-
+        
   </particlesystem>
 
 </PropertyList>

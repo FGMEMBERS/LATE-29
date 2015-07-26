@@ -26,6 +26,11 @@
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
+    <specular>
+      <red-prop>specular/red</red-prop>
+      <green-prop>specular/green</green-prop>
+      <blue-prop>specular/blue</blue-prop>
+    </specular>
   </animation>
 
   <!-- Cranking effects -->
@@ -33,9 +38,9 @@
   <model>
     <path>Aircraft/LATE-29/Models/Effects/cranking/cranking.xml</path>
     <offsets>
-      <x-m> -5.365 </x-m>
-      <y-m> -0.462 </y-m>
-      <z-m>  0.984 </z-m>
+      <x-m> -5.4816 </x-m>
+      <y-m> -0.4463 </y-m>
+      <z-m>  1.0028 </z-m>
     </offsets>
   </model>
 
@@ -43,9 +48,9 @@
   <model>
     <path>Aircraft/LATE-29/Models/Effects/cranking/cranking.xml</path>
     <offsets>
-      <x-m> -5.365 </x-m>
-      <y-m>  0.462 </y-m>
-      <z-m>  0.984 </z-m>
+      <x-m> -5.4816 </x-m>
+      <y-m>  0.4463 </y-m>
+      <z-m>  1.0028 </z-m>
     </offsets>
   </model>
 
@@ -53,9 +58,9 @@
   <model>
     <path>Aircraft/LATE-29/Models/Effects/waves/wakeG.xml</path>
     <offsets>
-      <x-m>  0.992 </x-m>
-      <y-m> -1.640 </y-m>
-      <z-m> -1.594 </z-m>
+      <x-m>  1.85527 </x-m>
+      <y-m> -1.96166 </y-m>
+      <z-m> -2.03209 </z-m>
       <pitch-deg> -45 </pitch-deg>
     </offsets>
   </model> 
@@ -64,56 +69,11 @@
   <model>
     <path>Aircraft/LATE-29/Models/Effects/waves/wakeD.xml</path>
     <offsets>
-      <x-m>  0.992 </x-m>
-      <y-m>  1.640 </y-m>
-      <z-m> -1.594 </z-m>
+      <x-m>  1.85527 </x-m>
+      <y-m>  1.96166 </y-m>
+      <z-m> -2.03209 </z-m>
       <pitch-deg> -45 </pitch-deg>
     </offsets>
   </model> 
 
-  <!-- Eclaboussures, avant gauche -->
-  <model>
-    <path>Aircraft/LATE-29/Models/Effects/waves/jetG.xml</path>
-    <offsets>
-      <x-m> -6.223 </x-m>
-      <y-m> -1.640 </y-m>
-      <z-m> -1.852 </z-m>
-      <pitch-deg> -90 </pitch-deg>
-    </offsets>
-  </model> 
-
-  <!-- Eclaboussures, avant droite -->
-  <model>
-    <path>Aircraft/LATE-29/Models/Effects/waves/jetD.xml</path>
-    <offsets>
-      <x-m> -6.223 </x-m>
-      <y-m>  1.640 </y-m>
-      <z-m> -1.852 </z-m>
-      <pitch-deg> -90 </pitch-deg>
-    </offsets>
-  </model> 
-
-  <!-- Eclaboussures, centre gauche -->
-  <model>
-    <path>Aircraft/LATE-29/Models/Effects/waves/jetmG.xml</path>
-    <offsets>
-      <x-m> -2.635 </x-m>
-      <y-m> -1.640 </y-m>
-      <z-m> -1.896 </z-m>
-      <pitch-deg> -90 </pitch-deg>
-    </offsets>
-  </model> 
-
-  <!-- Eclaboussures, centre droite -->
-  <model>
-    <path>Aircraft/LATE-29/Models/Effects/waves/jetmD.xml</path>
-    <offsets>
-      <x-m> -2.635 </x-m>
-      <y-m>  1.640 </y-m>
-      <z-m> -1.896 </z-m>
-      <pitch-deg> -90 </pitch-deg>
-    </offsets>
-  </model> 
-
 </PropertyList>
-

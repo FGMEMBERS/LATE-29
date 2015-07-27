@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
- 
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
 <PropertyList>
-
+  
   <fx>
-
+    
     <crank>
       <name>cranking</name>
       <mode>looped</mode>
@@ -12,15 +12,15 @@
         <property>/engines/engine/cranking</property>
       </condition>
       <volume>
-      <property>/engines/engine/cranking</property>
+        <property>/engines/engine/cranking</property>
         <offset>0.5</offset>
       </volume>
     </crank>
-  
+    
     <engine>
       <name>enginerun</name>
       <mode>looped</mode>
-      <path>Aircraft/LATE-29/Sounds/waspjr.wav</path>
+      <path>Aircraft/LATE-29/Sounds/running.wav</path>
       <condition>
         <property>/engines/engine/running</property>
       </condition>
@@ -35,19 +35,25 @@
         <offset>0.2</offset>
       </pitch>
     </engine>
-  
+    
     <rumble>
       <name>rumble</name>
       <mode>looped</mode>
       <path>Aircraft/LATE-29/Sounds/flotte.wav</path>
       <condition>
         <or>
-          <property>/gear/gear[0]/wow</property>
-          <property>/gear/gear[1]/wow</property>
-          <property>/gear/gear[2]/wow</property>
-          <property>/gear/gear[3]/wow</property>
-          <property>/gear/gear[4]/wow</property>
-          <property>/gear/gear[5]/wow</property>
+          <!-- /gear/gear[0]/wow -->
+          <property>sim/multiplay/generic/float[6]</property>
+          <!-- /gear/gear[1]/wow -->
+          <property>sim/multiplay/generic/float[7]</property>
+          <!-- /gear/gear[2]/wow -->
+          <property>sim/multiplay/generic/float[8]</property>
+          <!-- /gear/gear[3]/wow -->
+          <property>sim/multiplay/generic/float[9]</property>
+          <!-- /gear/gear[4]/wow -->
+          <property>sim/multiplay/generic/float[10]</property>
+          <!-- /gear/gear[5]/wow -->
+          <property>sim/multiplay/generic/float[11]</property>
         </or>
       </condition>
       <volume>
@@ -56,18 +62,24 @@
         <factor>0.2</factor>
       </volume>
     </rumble>
-
+    
     <squeal>
       <name>flotte</name>
       <path>Aircraft/LATE-29/Sounds/flotte.wav</path>
       <condition>
         <or>
-          <property>/gear/gear[0]/wow</property>
-          <property>/gear/gear[1]/wow</property>
-          <property>/gear/gear[2]/wow</property>
-          <property>/gear/gear[3]/wow</property>
-          <property>/gear/gear[4]/wow</property>
-          <property>/gear/gear[5]/wow</property>
+          <!-- /gear/gear[0]/wow -->
+          <property>sim/multiplay/generic/float[6]</property>
+          <!-- /gear/gear[1]/wow -->
+          <property>sim/multiplay/generic/float[7]</property>
+          <!-- /gear/gear[2]/wow -->
+          <property>sim/multiplay/generic/float[8]</property>
+          <!-- /gear/gear[3]/wow -->
+          <property>sim/multiplay/generic/float[9]</property>
+          <!-- /gear/gear[4]/wow -->
+          <property>sim/multiplay/generic/float[10]</property>
+          <!-- /gear/gear[5]/wow -->
+          <property>sim/multiplay/generic/float[11]</property>
         </or>
       </condition>
       <volume>
@@ -92,7 +104,7 @@
         <max>1.0</max>
       </pitch>
     </squeal>
-
+    
     <flap>
       <name>flaps</name>
       <mode>in-transit</mode>
@@ -102,7 +114,7 @@
         <factor>0.15</factor>
       </volume>
     </flap>
-
+    
     <wind>
       <name>wind</name>
       <mode>looped</mode>
@@ -121,7 +133,7 @@
         <max>1.0</max>
       </pitch>
     </wind>
- 
+    
     <stall>
       <name>stall</name>
       <mode>looped</mode>
@@ -132,7 +144,7 @@
         <max>1.0</max>
       </volume>
     </stall> 
-      
+    
     <!-- Toggle Switches -->     
     <switch>
       <name>click on</name>
@@ -145,7 +157,7 @@
         <factor>0.45</factor>
       </volume>
     </switch>
-
+    
     <switch>
       <name>click off</name>
       <mode>once</mode>
@@ -159,8 +171,7 @@
         <factor>0.45</factor>
       </volume>
     </switch>
-       
+    
   </fx>
- 
+  
 </PropertyList>
-

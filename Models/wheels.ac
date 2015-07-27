@@ -1,5 +1,5 @@
 AC3Db
-MATERIAL "DefaultWhite" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 1 1 1 shi 50 trans 0
+MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
 OBJECT world
 kids 6
 OBJECT poly
@@ -7,9 +7,9 @@ name "axesD"
 loc 0 0 -0
 data 5
 axesD
-texture "../../../../../texture.png"
-texrep 1 1
-crease 30.000001
+texture "texture.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 614
 -3.142054 -0.40396 -0.633425
 -3.150586 -0.402452 -0.635885
@@ -4006,9 +4006,9 @@ name "axesG"
 loc 0 0 -0
 data 5
 axesG
-texture "../../../../../texture.png"
-texrep 1 1
-crease 30.000001
+texture "texture.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 614
 -1.833575 -0.346765 0.617542
 -1.830176 -0.348931 0.621039
@@ -8005,9 +8005,9 @@ name "echappe"
 loc 0 0 -0
 data 7
 echappe
-texture "../../../../../texture.png"
-texrep 1 1
-crease 30.000001
+texture "texture.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 1410
 -5.751233 1.098843 0.27971
 -5.74755 1.093921 0.277471
@@ -19218,9 +19218,9 @@ name "roueD"
 loc 0 0 -0
 data 5
 roueD
-texture "../../../../../texture.png"
-texrep 1 1
-crease 30.000001
+texture "texture.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 802
 -2.678444 -1.006549 -1.590467
 -2.613199 -1.086527 -1.590467
@@ -25791,9 +25791,9 @@ name "roueG"
 loc 0 0 -0
 data 5
 roueG
-texture "../../../../../texture.png"
-texrep 1 1
-crease 30.000001
+texture "texture.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 802
 -2.678444 -1.006549 1.76337
 -2.613199 -1.086527 1.76337
@@ -32364,9 +32364,9 @@ name "support"
 loc 0 0 -0
 data 7
 support
-texture "../../../../../texture.png"
-texrep 1 1
-crease 30.000001
+texture "texture.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 1214
 5.602656 0.537781 -0.019571
 5.602656 0.1862 -0.019571

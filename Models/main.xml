@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -13,9 +13,9 @@
       var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
       var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
       
-      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
-      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
-    
+      var crew_door = self.getNode("sim/model/door-positions/crew/position-norm", 1);
+      var passenger_door = self.getNode("sim/model/door-positions/passenger/position-norm", 1);
+      
       crew_door.alias(float_0);
       passenger_door.alias(float_1);
     </load>
@@ -80,35 +80,11 @@
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
-<!--
-    <diffuse>
-      <red-prop>diffuse/red</red-prop>
-      <green-prop>diffuse/green</green-prop>
-      <blue-prop>diffuse/blue</blue-prop>
-    </diffuse>
-
-    <ambient>
-      <red-prop>ambient/red</red-prop>
-      <green-prop>ambient/green</green-prop>
-      <blue-prop>ambient/blue</blue-prop>
-    </ambient>
--->
     <specular>
       <red-prop>specular/red</red-prop>
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
-
-    <emission>
-      <red-prop>emission/red</red-prop>
-      <green-prop>emission/green</green-prop>
-      <blue-prop>emission/blue</blue-prop>
-    </emission>
-<!--
-    <shininess>
-      <shininess-prop>shininess</shininess-prop>
-    </shininess>
--->
   </animation>
 
   <effect>
@@ -130,20 +106,19 @@
     <object-name>barres</object-name>
   </effect>
 
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/LATE-29/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitres</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
+  </effect>
+  
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>vitres</object-name>
     <object-name>propdisc</object-name>
     <object-name>propblur</object-name>
-  </animation>
-
+  </effect>
+  
   <!-- Interieur -->
   <model>
     <path>Aircraft/LATE-29/Models/Interior/interior.xml</path>
@@ -202,6 +177,12 @@
     <type>spin</type>
     <object-name>HeliceComplete</object-name>
     <property>engines/engine[0]/rpm</property>
+    <condition>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value> 5 </value>
+      </greater-than>
+    </condition>
     <factor> 1 </factor>
     <center>
       <x-m> -6.310 </x-m>
@@ -220,11 +201,11 @@
     <type>rotate</type>
     <object-name>gouverne</object-name>
     <property>surface-positions/rudder-pos-norm</property>
-    <factor>30</factor>
+    <factor> 15 </factor>
     <center>
-      <x-m> 5.792 </x-m>
-      <y-m> 0.000 </y-m>
-      <z-m> 1.825 </z-m>
+      <x-m> 5.85371 </x-m>
+      <y-m> 0.00000 </y-m>
+      <z-m> 1.83273 </z-m>
     </center>
     <axis>
       <x> 0 </x>
@@ -238,16 +219,47 @@
     <type>rotate</type>
     <object-name>profondeur</object-name>
     <property>surface-positions/elevator-pos-norm</property>
-    <factor>30</factor>
+    <factor> 15 </factor>
     <center>
-      <x-m> 5.809 </x-m>
-      <y-m> 0.000 </y-m>
-      <z-m> 1.244 </z-m>
+      <x-m> 5.80460 </x-m>
+      <y-m> 0.00000 </y-m>
+      <z-m> 1.24358 </z-m>
     </center>
     <axis>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Animations des ailerons -->
+  <animation>
+    <type>rotate</type>
+    <object-name>aileronG</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor> 15 </factor>
+    <axis>
+      <x1-m> -0.77080 </x1-m>
+      <y1-m> -7.66463 </y1-m>
+      <z1-m>  1.28888 </z1-m>
+      <x2-m> -0.75548 </x2-m>
+      <y2-m> -5.02806 </y2-m>
+      <z2-m>  1.35622 </z2-m>
+    </axis>
+  </animation>
+ 
+  <animation>
+    <type>rotate</type>
+    <object-name>aileronD</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor> 15 </factor>
+    <axis>
+      <x1-m> -0.75548 </x1-m>
+      <y1-m>  5.02806 </y1-m>
+      <z1-m>  1.35622 </z1-m>
+      <x2-m> -0.77080 </x2-m>
+      <y2-m>  7.66463 </y2-m>
+      <z2-m>  1.28888 </z2-m>
     </axis>
   </animation>
 
@@ -256,11 +268,11 @@
     <type>rotate</type>
     <object-name>voletG</object-name>
     <property>surface-positions/flap-pos-norm</property>
-    <factor>30</factor>
+    <factor> 15 </factor>
     <center>
-      <x-m> -0.784 </x-m>
-      <y-m> -3.752 </y-m>
-      <z-m>  1.307 </z-m>
+      <x-m> -0.79339 </x-m>
+      <y-m> -3.75204 </y-m>
+      <z-m>  1.31293 </z-m>
     </center>
     <axis>
       <x> 0 </x>
@@ -268,16 +280,16 @@
       <z> 0 </z>
     </axis>
   </animation>
- 
+  
   <animation>
     <type>rotate</type>
     <object-name>voletD</object-name>
     <property>surface-positions/flap-pos-norm</property>
-    <factor>30</factor>
+    <factor> 15 </factor>
     <center>
-      <x-m> -0.784 </x-m>
-      <y-m>  3.752 </y-m>
-      <z-m>  1.307 </z-m>
+      <x-m> -0.79339 </x-m>
+      <y-m>  3.75204 </y-m>
+      <z-m>  1.31293 </z-m>
     </center>
     <axis>
       <x> 0 </x>
@@ -285,41 +297,5 @@
       <z> 0 </z>
     </axis>
   </animation>
- 
-  <!-- Animations des ailerons -->
-  <animation>
-    <type>rotate</type>
-    <object-name>aileronG</object-name>
-    <property>surface-positions/left-aileron-pos-norm</property>
-    <factor>15</factor>
-    <center>
-      <x-m> -0.784 </x-m>
-      <y-m> -6.346 </y-m>
-      <z-m>  1.307 </z-m>
-    </center>
-    <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
-    </axis>
-  </animation>
- 
-  <animation>
-    <type>rotate</type>
-    <object-name>aileronD</object-name>
-    <property>surface-positions/right-aileron-pos-norm</property>
-    <factor>15</factor>
-    <center>
-      <x-m> -0.784 </x-m>
-      <y-m>  6.346 </y-m>
-      <z-m>  1.307 </z-m>
-    </center>
-    <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
-    </axis>
-  </animation>
-
+  
 </PropertyList>
-

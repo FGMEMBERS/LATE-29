@@ -1,13 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- <PropertyList include="late29W-jsbsim-cnf.xml"> -->
-<PropertyList include="late29W-yasim-cnf.xml">
+<PropertyList include="late29-base.xml">
 
   <sim>
 
     <description>Latécoère 290 (Wheels)(YASim)</description>
     <author>Emmanuel BARANGER (3D/FDM)</author>
 
+    <flight-model>yasim</flight-model>
+    <aero>late29W-yasim</aero>
+    
+    <model>
+      <path>Aircraft/LATE-29/Models/late29W.xml</path>
+    </model>
+    
+    <startup>
+      <splash-texture>Aircraft/LATE-29/Splashs/late29W-splash.png</splash-texture>
+    </startup>
+    
+    <sound>
+      <path>Aircraft/LATE-29/Sounds/late29W-sound.xml</path>
+    </sound>
+    
     <rating>
       <FDM type="int">     2 </FDM>
       <systems type="int"> 2 </systems>
@@ -18,4 +32,3 @@
   </sim>
 
 </PropertyList>
-

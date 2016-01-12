@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList include="late29-base.xml">
-  
+
   <sim>
-    
+
     <description>Latécoère 290 (Floats) (YASim)</description>
     <author>Emmanuel BARANGER (3D/FDM)</author>
-    
+
     <aircraft-version>0.2</aircraft-version>
     <status>0.2 Alpha</status>
+    <variant-of>late29W</variant-of>
     
     <flight-model>yasim</flight-model>
     <aero>late29F-yasim</aero>
-    
+
     <type type="string">seaplane</type>
-  
+
     <model>
       <path>Aircraft/LATE-29/Models/late29F.xml</path>
     </model>
-    
+
     <startup>
       <splash-texture>Aircraft/LATE-29/Splashs/late29F-splash.png</splash-texture>
     </startup>
-    
+
     <sound>
       <path>Aircraft/LATE-29/Sounds/late29F-sound.xml</path>
     </sound>
-    
+
     <rating>
       <FDM type="int">     2 </FDM>
       <systems type="int"> 2 </systems>
